@@ -67,11 +67,12 @@ class ShapeGenerator:
 
                 self.reposition(reduction_ratio, location, size)
                 size *= reduction_ratio
+                self.screen.update()
 
     def run(self):
         while True:
             choice = input(
-                "Which art do you want to generate? Enter a number between 1 to 9 inclusive: ")
+                "Which art do you want to generate? Enter a number between 1 to 9 inclusive (or 'q' to quit): ")
 
             self.clear_board()
 
@@ -110,6 +111,9 @@ class ShapeGenerator:
                 for side in range(3, 6):  # triangle, square, pentagon
                     for layer in range(1, 4):
                         self.draw_shape(2, side, layer)
+
+            elif choice.lower() == "q":
+                break
 
             else:
                 print("Invalid choice.")
