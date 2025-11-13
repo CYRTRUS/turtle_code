@@ -76,7 +76,7 @@ class ShapeGenerator:
 
             self.clear_board()
 
-            num_shape = random.randint(20,30)  # num shape range: 20-30 shapes
+            num_shape = random.randint(20, 30)  # num shape range: 20-30 shapes
 
             if choice == "1":
                 self.draw_shape(num_shape, 3, 1)  # triangles, 1 layer each
